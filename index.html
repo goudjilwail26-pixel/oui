@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">      
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>less is more</title>
+  <style>
+    /* ===== Basic Reset ===== */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: black;
+      color: white;
+    }
+
+    /* ===== Container ===== */
+    .container {
+      position: relative;
+      text-align: center;
+      color: white;
+      z-index: 1;
+    }
+
+    /* ===== Video Background ===== */
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* ===== Header ===== */
+    .h1 {
+      font-size: 40px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      margin: 20px;
+      cursor: default;
+    }
+    .h3 {
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      margin: 20px;
+      cursor: default;
+      color: #787582;
+      margin-top: 50px;
+     font-size: 60px;
+      
+
+    }
+    
+
+    /* ===== Rows of Images ===== */
+    .row1, .row2 {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 20px 0;
+      gap: 40px;
+      margin-top: 180px;
+    }
+
+    .size1, .size2, .car1, .car2, .car3, .car4, .car5, .car6 {
+      border-radius: 20px;
+      cursor: pointer;
+      transition: transform 0.5s, box-shadow 0.5s;
+    }
+
+    .size1:hover, .size2:hover, .car1:hover, .car2:hover, .car3:hover,
+    .car4:hover, .car5:hover, .car6:hover {
+      transform: scale(1.2);
+      box-shadow: 0 4px 8px rgba(139, 117, 97, 0.6);
+    }
+
+    /* ===== Form ===== */
+    .form-container {
+      background: rgba(58,60,65,0.95);
+      padding: 20px;
+      max-width: 500px;
+      margin: 50px auto;
+      border-radius: 10px;
+    }
+
+    .form-container input,
+    .form-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #fff;
+      background: rgba(255,255,255,0.05);
+      color: white;
+    }
+
+    .form-container input:hover,
+    .form-container textarea:hover {
+      border: 1px solid #000;
+    }
+
+    .form-container button {
+      padding: 10px;
+      width: 100%;
+      background-color: #5227FF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-container button:hover {
+      background-color: #4444aa;
+    }
+    .row1 {
+margin-top: 60px;
+
+    }
+    
+  .arrow {
+  font-size: 60px;
+  transition: transform 0.5s;
+  cursor: pointer;
+  color: white;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="h1">less is more</h1>
+    <h3 class="h3">choose your size</h3>
+    <div class="arrow" >&#8659;</div>
+    <!-- Video Background -->
+    <video src="vid/121885-724720140 (2).mp4" loop autoplay muted></video>
+
+    <!-- Row 1 Images -->
+    <div class="row1">
+      <img src="img/ok.jpg" class="size1" alt="size1" width="300">
+      <img src="img/ok.jpg" class="size2" alt="size2" width="300">
+    </div>
+
+    <!-- Row 2 Images -->
+    <div class="row2">
+      <img src="img/ok.jpg" class="car1" alt="car1" width="170">
+      <img src="img/ok.jpg" class="car2" alt="car2" width="170">
+      <img src="img/ok.jpg" class="car3" alt="car3" width="170">
+      <img src="img/ok.jpg" class="car4" alt="car4" width="170">
+      <img src="img/ok.jpg" class="car5" alt="car5" width="170">
+      <img src="img/ok.jpg" class="car6" alt="car6" width="170">
+    </div>
+
+    <!-- Form -->
+    <div class="form-container">
+      <form action="https://formsubmit.co/your-email@example.com" method="POST">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+1234567890" required>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3" placeholder="Street, City, Country" required></textarea>
+
+        <label>Delivery Option:</label>
+        <div>
+          <input type="radio" id="office" name="delivery" value="Office" required>
+          <label for="office">Send to Office</label>
+        </div>
+        <div>
+          <input type="radio" id="home" name="delivery" value="Home" required>
+          <label for="home">Send to Home</label>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+  </div>
+</body>
+</html>
